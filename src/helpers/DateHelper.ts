@@ -194,7 +194,7 @@ export default class DateHelper {
     excludeEnd: boolean = true,
   ): Timestamp[] {
     let start = this.date(date);
-    let end: dayjs.Dayjs;
+    let end: dayjs.Dayjs | null;
     if (typeof range === 'number') {
       end = start.add(range, interval as ManipulateType);
     } else if (dayjs.isDayjs(range)) {
